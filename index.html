@@ -10,3 +10,27 @@
     <script src="./app.js"></script>
   </body>
 </html>
+
+
+// Define a Book class
+class Library {
+  constructor() {
+    this.books = [];
+  }
+
+  addBook(book) {
+    this.books.push(book);
+  }
+
+  removeBook(bookTitle) {
+    this.books = this.books.filter(book => book.title !== bookTitle);
+  }
+}
+
+
+// Example usage
+const book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald");
+const patron1 = new Patron("John Doe");
+
+checkOutBook(book1, patron1);
+
